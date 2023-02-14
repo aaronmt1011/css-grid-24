@@ -1,3 +1,27 @@
+/*
+Explicit grids/tracks are grids/tracks that have been defined in the code, aka
+they have been given properties. (grid-template-columns, grid-template-rows, etc.)
+For the example below, the grid columns would be our explicit track because it
+was given size and group size properties (grid-template-columns).
+*/
+
+/*
+Implicit grids/tracks are grids/tracks that have not been defined in the code.
+For the example below, the grid rows would be our implicit tracks because nothing
+was defined for it.
+*/
+
+/*
+Implicit grids/tracks that have not been defined by grid-template-columns will
+be placed on the next row for the defined columns. Any new divs that are added
+to our code below will be placed below defined columns on new rows. If these 
+new rows have not been defined by grid-template-rows then the browser will use 
+automatic sizes on them.
+*/
+
 .container {
     display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 200px 400px;
 }
