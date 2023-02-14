@@ -1,0 +1,31 @@
+/*
+Putting display grid on a container will not do much. Have to add properties to 
+dice up the div into a grid. 
+*/
+
+
+/*
+grid-template-columns is used to give the columns different sizes. It also uses 
+the amount of sizes to dictate the amount of columns.
+The rows are automatically created due to implicit grids being used. (by default)
+*/
+
+
+/*
+grid-template-rows is used to give the rows different sizes. Rows that are not
+defined will make a size for themselves. 
+The columns are not automatically created. Will have to use the 
+grid-template-columns to define columns, unless one wide column is desired.
+*/
+
+
+/*
+grid-gap is used to give space to the children of the grid div
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: 300px auto 500px;
+    grid-template-rows: 300px 100px 300px;
+    grid-gap: 20px;
+}
