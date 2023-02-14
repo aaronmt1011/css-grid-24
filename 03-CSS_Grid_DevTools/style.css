@@ -1,3 +1,16 @@
+/*
+Dev tools can be used to help with designing a grid item. 
+
+A great tool to use is the overlay grid lines. These can help out a lot with 
+placement and size issues of the grid items. The overlay tools uses tracks,
+which are the border lines/areas between the grid items. The tracks also use
+different patterns to show different parts of container. For example, the
+patterns will show the difference if something is explicit(created by us) or
+implicit (not created by us). The pattern also differs when it is showing a gap.
+*/
+
 .container {
     display: grid;
-  }
+    grid-template-columns: 100px 200px;
+    grid-gap: 10px;
+}
