@@ -1,0 +1,46 @@
+/*
+Sizing with percentages is risky. Should only be done to reach percentages
+smaller than 100% due to the grid-gap and other size changers.
+*/
+
+/*
+fractional units (fr) should be used more due to them taking into account the other
+size changers then applying the sizes to make up a fraction of the main div.
+*/
+
+/*
+This code with 1fr:
+
+grid-template-columns: 200px 200px 1fr; 
+
+Will use the leftover space after the other 2 columns are laid down and other size
+changers also happen.
+*/
+
+/*
+This code with 2 1fr: 
+
+grid-template-columns: 200px 1fr 1fr; 
+
+Will use the leftover space after the first column is laid down and other size 
+changers also happen. The 2 1fr will split the leftover space between themselves 
+and use 1/2 of the space each
+*/
+
+/*
+This code with 1 1fr and 1 2fr: 
+
+grid-template-columns: 200px 2fr 1fr; 
+
+Will  use the leftover space after the first column is laid down and other size 
+changers also happen. They will break down the space between each other. The 2fr
+takes up 2/3 of the free space while 1fr takes the last 1/3 free space.
+*/
+
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    border: 10px solid var(--yellow);
+    grid-template-columns: 200px 1fr 1fr;
+}
