@@ -1,4 +1,29 @@
+/*
+grid-auto-flow is used to place leftover divs that have not been explicitly
+defined.
+*/
+
+/*
+grid-auto-columns is used to define the implicit divs that are affected by 
+grid-auto-flow: column;.
+*/
+
+/*
+grid-auto-row is used to define the implicit divs that are affected by 
+grid-auto-flow: row;.
+*/
+
+/*
+For our bottom example, we have 3 divs but the code is only for 2 of the divs. 
+This means that the last div is implicit. The grid-auto-flow will dictate the
+placement of the last div. Since we put column, the last div will be placed on
+the next column instead of the next row (grid-auto-flow: row; is the default).
+*/
+
 .container {
     display: grid;
     grid-gap: 20px;
+    grid-template-columns: 60px 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
 }
