@@ -1,0 +1,41 @@
+/*
+repeat() can be used with our grid properties to make copies of whatever we
+want to be made numerous times.
+
+For the example:
+grid-template-columns: repeat(4, 1fr);
+
+repeat() works by using the right parameter as the property you want 
+created. In our example, we use 1fr because we want 1fr sized columns.
+
+We also want to make 4 coluumns with the 1fr size. The parameter on the left 
+acts as the multiplier. It takes a number and makes that much copies of the 
+parameter on the right.
+*/
+
+/*
+repeat() can also take numerous right parameters. 
+
+If we wanted to have a grid that has repeating pattern of columns, we can input
+(#, 1fr auto) or something similar and it would give us # of copies of the right
+parameter.
+*/
+
+/*
+repeat() can be used with other sizing properties.
+
+If we wanted the first and last column to have a defined size, we can use:
+
+grid-template-columns: 100px, repeat(2, 1fr auto), 200px;
+*/
+
+/*
+repeat() can be used on grid-template-columns and grid-template-row to shorten
+the code.
+*/
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 100px repeat(2, 1fr auto) 200px;
+}
