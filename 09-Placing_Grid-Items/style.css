@@ -1,0 +1,53 @@
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/*
+grid-column & grid-row have 2 long-hand properties. They are:
+
+-- grid-column-start & grid-row-start
+    - places the grid item at a defined grid track (grid row/column)
+
+-- grid-column-end & grid-row-end
+    - places the end of the span at this defined grid track
+*/
+
+
+/*
+grid-column-start: 2; is used below to force the .poop grid item to start on 
+the second track (second column) of the grid. This also means that the grid
+items after .poop grid item will be forced to fill the grid spaces behind .poop
+which will also leave an empty space between .poop grid item and 8 grid item.
+*/
+
+/*
+grid-column-end: 5; is used below to force the .poop grid item to span to the
+5th grid track. Forces grid itmes after to take up other grid positions.
+*/
+
+/*
+To simplify both of the above codes into a single line, we would use:
+
+grid-column: 2 / 5;
+*/
+
+/*
+grid-column: # / #; can also be used with span #. The span # is used to define 
+the size of the grid item while the other # is used to define the start/end of
+the grid item.
+
+grid-column: span 2 / 5; is used to make the .poop grid item span 2 grid spots
+while ending at grid track 5.
+*/
+
+
+.poop {
+    background: #bada55;
+    /*grid-column-start: 2;
+    grid-column-end: 5;
+    grid-column: 2 / 5;
+    grid-column: span 2 / 5;*/
+    grid-column: 1 / span 2;
+}
