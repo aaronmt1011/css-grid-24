@@ -37,8 +37,18 @@
 
 
 /* Make Item 8 two rows high */
+.item8 {
+    grid-row: span 2;
+}
+
+
 
 /* Make Item 15 span the entire grid width */
+.item15 {
+    grid-column: 1 / -1;
+}
+
+
 
 /* Make item 18 span 4 widths, but end at 9 */
 
