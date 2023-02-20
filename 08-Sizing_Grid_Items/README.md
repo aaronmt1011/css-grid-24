@@ -3,7 +3,7 @@
 
 <p>The first task to learn is to simply change the size of the grid itmes. This can be a bit challenging because sizing a grid item will affect the grid column/row it is in.</p>
 
-<p>The answer to the above problem is... the <b>span<b> size!</p>
+<p>The answer to the above problem is... the <b>span</b> size!</p>
 
 <p>Overview of span:</p>
 <ul>
