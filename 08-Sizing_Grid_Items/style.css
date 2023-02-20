@@ -1,0 +1,37 @@
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/*
+
+We cannot size a single grid item using width: #; due to it being tied to the 
+column it is in. The newly created side will mess with the size of the column 
+it is in. (if you used fr size to created the initial columns)
+
+
+A good way to size a grid is through grid-column: span #;. The span size
+makes the grid expand out to take over whatever amount of columns desired.
+
+grid-row: span #; also works in a similar way to grid-columnd: span #;.
+
+This also forces the grid items that come after affected grid to go to next 
+column/row.
+
+Another side effect to worry about is empty spaces that may happen if the span
+number is too large or is at the edge of the row.
+
+If the span number is way larger than grid columns/row amount then it will
+force the grid to expand out to the size of the span. For our example, we wanted
+the grid to have only 5 columns, but we sized the grid-column: span 10;. We
+would get a grid that has 11 columns instead of the desired 5 columns.
+
+*/
+
+.item9 {
+    background: mistyrose;
+    /*width: 500px;*/
+    grid-column: span 2;
+    grid-row: span 2;
+}
