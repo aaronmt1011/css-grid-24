@@ -51,5 +51,18 @@
 
 
 /* Make item 18 span 4 widths, but end at 9 */
+.item18 {
+    grid-column: span 4 / 9;
+}
+
+
 
 /* Make item 20 start at row 4 and have a height of 3 rows */
+.item20 {
+    grid-row: 4 / span 3;
+}
+
+/*
+The project may have a lot of empty space between the grid items, but this is
+expected.
+*/
