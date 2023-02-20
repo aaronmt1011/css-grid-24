@@ -2,6 +2,7 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 /*
@@ -13,6 +14,9 @@ grid-column & grid-row have 2 long-hand properties. They are:
 -- grid-column-end & grid-row-end
     - places the end of the span at this defined grid track
 */
+
+
+
 
 
 /*
@@ -42,12 +46,43 @@ grid-column: span 2 / 5; is used to make the .poop grid item span 2 grid spots
 while ending at grid track 5.
 */
 
+/*
+The examples above can also be apllied to grid-row. Everything will be similar,
+except things will happen for the rows instead.
+*/
+
+
+
+
+
+/*
+A quick tip to remember: If you want to expand a grid item to the last track 
+item but don't know the last track number, use -1.
+
+grid-column: 1 / -1;
+
+This will allow you to expand from the first track to the last track. This is
+the way to make a grid 100% size width. Is also the same way for grid-row.
+*/
+
+/*
+grid-column: 1/ -2;
+
+Using negative numbers like above will set the span end at the second to last
+track. 
+-- Negative numbers go in reverse order of the column/row tracks
+-- Negative numbers must be used with expicit columns/row tracks
+-- If used with implicit columns/row tracks, nothing happens.
+*/
+
 
 .poop {
     background: #bada55;
     /*grid-column-start: 2;
     grid-column-end: 5;
     grid-column: 2 / 5;
-    grid-column: span 2 / 5;*/
-    grid-column: 1 / span 2;
+    grid-column: span 2 / 5;
+    grid-column: 1 / span 2;*/
+    grid-column: span 2;
+    grid-row: 1 / -1;
 }
