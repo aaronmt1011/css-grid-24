@@ -1,20 +1,37 @@
 /*
 auto-fill is used to give the browser the say on how to spread out the grid
-items on the grid. The browser will fit the items based off of conetent size
-and other factors into the columns/rows.
+items on the grid based off of conetent size and other factors into the 
+columns.
 */
 
 /*
 auto-fill is useful because it can be resized based off the size fo the site.
 If the site is larger, auto-fill will place more grid items with same space onto
-the column/row until the grid width is the same as the site width. Works in a
+the column until the grid width is the same as the site width. Works in a
 similar way when shrinking the site, except everything will move onto the next
 row as the grid rows get smaller.
+*/
+
+
+/*
+auto-fit is used to cut off the width of the grid at the end point of a 
+grid item.
+*/
+
+/*
+auto-fill & auto-fit are good tools to use when we are creating our grid 
+columns. Can be used for header buttons, links, etc. 
 */
 
 .container {
     display: grid;
     grid-gap: 20px;
     border: 10px solid var(--yellow);
+    /*grid-template-columns: repeat(auto-fit, 150px);*/
     grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.item4 {
+    grid-column: auto / -1;
 }
