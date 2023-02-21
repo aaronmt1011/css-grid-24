@@ -16,5 +16,12 @@ auto-fill - lays/clears out more grid items at similar sizes when the grid width
     /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
 
     /* auto-fit should be used becasue it forces grid items to fill grid width */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+
+
+    /*
+    fit-content() can be used in place of auto to stop grid item from getting
+    larger than wanted.
+    */
+    grid-template-columns: fit-content(100px) 150px 150px 150px;
 }
