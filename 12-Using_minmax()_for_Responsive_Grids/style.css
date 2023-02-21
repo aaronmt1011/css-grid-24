@@ -1,0 +1,20 @@
+/*
+minmax() gives a grid item a minimum size and maximum size it can get. minmax()
+should be used with auto-fill and auto-fit to format responsive grids (grids 
+that respond to width changes). Using auto-fill/auto-fit with minmax() affects 
+the grid items in different ways.
+
+auto-fit - force grid items to fill up entire grid width
+
+auto-fill - lays/clears out more grid items at similar sizes when the grid width is changed
+*/
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    border: 10px solid var(--yellow);
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+
+    /* auto-fit should be used becasue it forces grid items to fill grid width */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
