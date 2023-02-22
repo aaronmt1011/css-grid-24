@@ -1,0 +1,32 @@
+/*
+grid-template-areas works by using area names to form areas on the grid that 
+can be occupied by a grid item. This will allow the grid to fill up the spot 
+without specifiying any height or width.
+*/
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 150px 150px 100px;
+    grid-template-areas: 
+        "sidebar-1      content     sidebar-2"
+        "sidebar-1      content     sidebar-2"
+        "footer         footer      footer";
+}
+
+.sidebar-L {
+    grid-area: sidebar-1;
+}
+
+.content {
+    grid-area: content;
+}
+
+.sidebar-R {
+    grid-area: sidebar-2;
+}
+
+.footer {
+    grid-area: footer;
+}
