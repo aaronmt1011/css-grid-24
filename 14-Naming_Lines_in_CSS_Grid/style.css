@@ -1,0 +1,42 @@
+/*
+To name grid lines, use [] brackets
+
+The example below uses [] to give each line a name. This is then used to
+position grid item 3.
+*/
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 
+        [site-left] 1fr 
+        [content-start] 500px 
+        [content-end] 1fr 
+        [site-right];
+    grid-template-rows: 
+        [content-top] repeat(10, auto) 
+        [content-bottom];
+}
+
+
+/* 
+Want the grid item to be set in the center and to fill up column 
+*/
+
+.item3 {
+    background: palevioletred;
+
+    /* This is how we would do it without naming lines */
+    
+    /*
+    grid-column: 2;
+    grid-row: 1 / span 10;
+    */
+
+    /*
+    Grid line names are used to define spacing and positioning of grid item 3.
+    */
+    
+    grid-column: content-start;
+    grid-row: content-top / content-bottom;
+}
