@@ -30,3 +30,21 @@ without specifiying any height or width.
 .footer {
     grid-area: footer;
 }
+
+/*
+@media (max-width: #) can be used to position the grid areas into different
+a different areas depending on the max-width #.
+
+For the example below, the grid areas are changed from being 3 columns to 2
+columns when the width of the page is lower than 700px.
+*/
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px 100px;
+        grid-template-areas: 
+            "content        content"
+            "sidebar-1      sidebar-2"
+            "footer         footer";
+    }
+}
