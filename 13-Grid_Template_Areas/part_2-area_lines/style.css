@@ -1,4 +1,143 @@
 .container {
     display: grid;
     grid-gap: 20px;
+    grid-template-areas:
+        "💩 💩 💩 💩 🍇 🍇 🍇 🍇"
+        "💩 💩 💩 💩 🍇 🍇 🍇 🍇"
+        "💩 💩 💩 💩 🍇 🍇 🍇 🍇"
+        "💩 💩 💩 💩 🍇 🍇 🍇 🍇";
 }
+
+.item1 {
+    grid-column: 💩-start / 💩-end;
+}
+
+/*
+Grid area names can be combined with grid-column to position a grid item.
+
+For the example below, we used the 💩 grid area name to position our grid item 
+to fill out the full width of the 💩 grid area. We also used the -start and -end 
+attributes to get grid item to spread to the full area of the 💩 grid area.
+*/
+.item2 {
+    grid-column: 🍇-start / 🍇-end;
+}
+
+
+/*
+Grid area names can also be used with each other to get a grid item that expands
+through any number of grid areas.
+
+For the example below, the grid starts at the first track of the 💩 grid area and
+is told to extend to the end of the 🍇 grid area.
+
+grid-row-end was also used to get .item3 to go to the bottom of the explicit grid.
+*/
+.item3 {
+    grid-column: 💩-start / 🍇-end;
+    grid-row-end: 💩-end;
+}
+
+
+/*
+The following code is just used for practice. Closer code means its on same row
+*/
+
+.item4 {
+    grid-column: 💩-start / -2;
+}
+
+.item5 {
+    grid-column: span 1;
+}
+
+
+
+
+.item6 {
+    grid-column: 1;
+}
+
+.item7 {
+    grid-column: 2 / 💩-end;
+}
+
+.item8 {
+    grid-column: 🍇-start / -2;
+}
+
+.item9 {
+    grid-column: span 1;
+}
+
+
+
+
+.item10 {
+    grid-column: span 3;
+}
+
+.item11 {
+    grid-column: 4 / 6;
+}
+
+.item12 {
+    grid-column: span 3;
+}
+
+
+
+
+.item13 {
+    grid-column: span 2;
+}
+
+.item14 {
+    grid-column: 3 / 7;
+}
+
+.item15 {
+    grid-column: span 2;
+}
+
+
+
+
+.item16 {
+    grid-column: 1;
+}
+
+.item17 {
+    grid-column: 2 / -2;
+}
+
+.item18 {
+    grid-column: span 1;
+}
+
+
+
+
+.item19 {
+    grid-column: 💩-start / 🍇-end;
+}
+
+
+
+
+.item20 {
+    grid-column: 💩-start / 💩-end;
+}
+
+.item21 {
+    grid-column: 🍇-start / 🍇-end;
+}
+
+
+
+
+.item22, .item23, .item24, .item25 {
+    grid-column: span 2;
+}
+
+
