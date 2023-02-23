@@ -1,6 +1,32 @@
 /*
     justify-items:
+
+Overview of the properties of justify-items:
+    -- center - Centers the grid item/content
+    -- stretch - Expands grid item/content to fit entire width of the grid area
+    -- start (flex-start) - Places grid item/content to the front (left) of the grid area
+    -- end (flex-end) - Places grid item/content at the end (right) of the grid area 
+
+
     align-items:
+
+Overview of the properties of align-items:
+    -- start (flex-start) - Places grid item/content to the front (left) of the grid area
+    -- end (flex-end) - Places grid item/content at the end (right) of the grid area 
+    -- center - Centers the grid item/content
+    -- stretch - Expands grid item/content to fit entire width of the grid area
+    -- baseline - Places grid items/content at the baseline
+
+
+place-items:
+
+justify-items and align-items have a shorthand code: place-items. place-items
+takes both properties in one line. The first property is the align-items. The
+second property is the justify-items.
+
+
+
+
 
     justify-content:
     align-content:
@@ -8,12 +34,20 @@
     align-self:
     justify-self:
 
-    justify-* is row axis
-    align-* is column axis
+    justify-* is row axis (x axis)
+    align-* is column axis (y axis)
 */
 
 .container {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    /*justify-items: stretch;
+    align-items: end;*/
+    place-items: end stretch;
+}
+
+.itm {
+    background: lavender;
 }
