@@ -1,0 +1,39 @@
+/*
+grid-auto-flow: dense; is used below to force the other grid items around the
+wider grid items to fill in the empty space made by the wider grid items.
+*/
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-flow: dense;
+}
+
+/*
+nth-child(6n) is used to target every 6th grid item
+*/
+.item:nth-child(6n) {
+    background: cornflowerblue;
+    grid-column: span 6;
+}
+
+.item:nth-child(8n) {
+    background: tomato;
+    grid-column: span 2;
+}
+
+.item:nth-child(9n) {
+    background: lavender;
+    grid-row: span 2;
+}
+
+
+/*
+!important tag is used to force this happen over the code above. This is needed
+because nth-child is more specific than using class names.
+*/
+.item18 {
+    background: green !important;
+    grid-column-end: -1 !important;
+}
