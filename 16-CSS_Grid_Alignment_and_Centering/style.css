@@ -1,53 +1,113 @@
 /*
-    justify-items:
+    justify-* is row axis (x axis)
+    align-* is column axis (y axis)
+*/
+
+
+
+
+
+/*
+justify-items and align-items deal with positioning grid items.
+
 
 Overview of the properties of justify-items:
     -- center - Centers the grid item/content
-    -- stretch - Expands grid item/content to fit entire width of the grid area
-    -- start (flex-start) - Places grid item/content to the front (left) of the grid area
-    -- end (flex-end) - Places grid item/content at the end (right) of the grid area 
 
+    -- stretch - Expands grid item/content to fit entire width of the grid 
+                    container
 
-    align-items:
+    -- start (flex-start) - Places grid item/content to the front (left) of the 
+                    grid container
+
+    -- end (flex-end) - Places grid item/content at the end (right) of the grid 
+                    container 
+
 
 Overview of the properties of align-items:
-    -- start (flex-start) - Places grid item/content to the front (left) of the grid area
-    -- end (flex-end) - Places grid item/content at the end (right) of the grid area 
+    -- start - Places grid item/content to the front (left) of the grid container
+
+    -- end - Places grid item/content at the end (right) of the grid container 
+
     -- center - Centers the grid item/content
-    -- stretch - Expands grid item/content to fit entire width of the grid area
+
+    -- stretch - Expands grid item/content to fit entire width of the grid 
+                    container
+
     -- baseline - Places grid items/content at the baseline
 
-
-place-items:
 
 justify-items and align-items have a shorthand code: place-items. place-items
 takes both properties in one line. The first property is the align-items. The
 second property is the justify-items.
+*/
 
 
 
 
 
-    justify-content:
-    align-content:
+/*
+justify-content and align-content are used to space grid items. Reminder, 
+justify-content affects the x-axis (row) while align-content affects the
+y-axis (column). They share similar spacing properties.
 
-    align-self:
-    justify-self:
+Overview of the properties of justify-content and align-content:
+    -- start - Places grid item/content to the front (left) of the grid 
+                container
 
-    justify-* is row axis (x axis)
-    align-* is column axis (y axis)
+    -- end - Places grid item/content at the end (right) of the grid 
+                container 
+
+    -- center - Centers the grid item/content
+
+    -- stretch - Expands grid item/content to fit entire width of the grid 
+                container
+                
+    -- space-around - Places equal amounts of space around items with half-sized
+                        spaces on the ends of the grid
+
+    -- space-between - Places equal amounts of space around items with no spacing
+                        at the ends of the grid
+
+    -- space-evenly - Places equal amount of space around items with equal
+                        amounts of spacing at the ends of the grid
+*/
+
+
+
+
+
+/*
+justify-self and align-self are used to align a single grid item in its grid
+if the grid item is smaller than its grid area..
+
+Properties of justify-self and align-self:
+    -- start - Aligns grid item to the start (left) of its grid.
+
+    -- end - Aligns grid item to the end (right) of its grid.
+
+    -- center - Aligns grid item to the center of its grid.
+
+    -- stretch - Forces grid item to stretch to fill its grid area
 */
 
 .container {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(5, 100px);
+    height: 600px;
+    border:10px solid var(--yellow);
+    grid-template-columns: repeat(5, 100px);
     /*justify-items: stretch;
     align-items: end;*/
-    place-items: end stretch;
+    place-items: stretch stretch;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 .itm {
     background: lavender;
+}
+
+.itm5 {
+    justify-self: center;
 }
