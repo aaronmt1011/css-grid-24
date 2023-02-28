@@ -27,6 +27,22 @@ function randomNumber(limit) {
 
 
 
+// handleClick() is used to make the clicked image the overlay image (upper image).
+function handleClick(e) {
+    const src = e.currentTarget.querySelector('img').src;
+    overlayImage.src = src;
+    overlay.classList.add('open');
+}
+
+
+
+// close() is used to remove the open class from the clicked image
+function close() {
+    overlay.classList.remove('open');
+}
+
+
+
 // Array digits is created with a length of 50 indexes and uses .from() function
 // to fill up the 50 slots with an array that that has 2 random numbers 
 // between 1-4.  
@@ -42,3 +58,12 @@ const digits = Array.from({length: 50}, () =>
 // .join() is then used to convert to a string.
 const html = digits.map(generateHTML).join('');
 gallery.innerHTML = html;
+
+const items = document.querySelectorAll('.item');
+
+
+
+// Below is used to catch the clicks to open the image and close the image.
+items.forEach(item => item.addEventListener('click', handleClick));
+
+overlayClose.addEventListener('click', close);
