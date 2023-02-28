@@ -1,0 +1,6 @@
+.stacked {}
+
+.stacked>* {
+    width: 30%;
+    margin-bottom: 20px;
+}
