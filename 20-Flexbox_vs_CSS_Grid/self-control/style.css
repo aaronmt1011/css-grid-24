@@ -1,14 +1,28 @@
+/*
+grid-template is the shorthand to both grid-template-row and grid-template-column.
+*/
+
 .corners {
     display: grid;
     height: 200px;
     width: 200px;
     border: 10px solid var(--yellow);
-
+    grid-template: 1fr 1fr / 1fr 1fr;
+    align-items: end;
+    justify-items: end;
 }
 
 
+/*
+The following grid items are forced (override) to the top or left of their 
+grid area.
+*/
 .corner:nth-child(1),
-.corner:nth-child(2) {}
+.corner:nth-child(2) {
+    align-self: start;
+}
 
 .corner:nth-child(1),
-.corner:nth-child(3) {}
+.corner:nth-child(3) {
+    justify-self: start;
+}
