@@ -1,0 +1,5 @@
+.flex-container {}
+
+.flex-container>* {
+    margin: 10px;
+}
