@@ -39,8 +39,59 @@ p {
   grid-auto-flow: dense;
 }
 
+
+
+/*
+.item creates a grid with 1 column and 1 row. This will be used to center the 
+image in the gallery.
+*/
 .item {
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+
+
+.item img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*
+.item__overlay causes an image to become darker and have the view button.
+*/
+.item__overlay {
+  background: #00000032;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(100%);
+}
+
+
+.item__overlay button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.11);
+  padding: 5px;
+}
+
+/*
+Causes image to have the .item__overlay 100% applie when the mouse is hovered over it.
+*/
+.item:hover .item__overlay {
+  transform: translateY(0);
 }
 
 
