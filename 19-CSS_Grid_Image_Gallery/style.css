@@ -1,57 +1,106 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    padding: 50px;
-    font-family: sans-serif;
-    background: linear-gradient(to right, #F93D66, #6D47D9);
-  }
+body {
+  padding: 50px;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #F93D66, #6D47D9);
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 0 5px 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
 
-  p {
-    margin: 0 0 20px 0;
-  }
+p {
+  margin: 0 0 20px 0;
+}
 
-  .close {
-    background: none;
-    color: white;
-    border: 0;
-  }
-
-  .gallery {}
+.close {
+  background: none;
+  color: white;
+  border: 0;
+}
 
 
 
-  .overlay {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.7);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    z-index: 2;
-  }
+/*
+.gallery uses display:grid to create the basis of the image gallery.
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+}
 
-  .overlay.open {
-    display: grid;
-  }
+.item {
+  overflow: hidden;
+}
 
-  .overlay figure {
-    background: white;
-    width: 700px;
-    padding: 20px;
-  }
 
-  .overlay img {
-    width: 100%;
-  }
+/*
+grid-row is used to span each item according to there v# that was given based
+off of the functions from script.js.
+*/
+.item.v2 {
+  grid-row: span 2;
+}
+
+.item.v3 {
+  grid-row: span 3;
+}
+
+.item.v4 {
+  grid-row: span 4;
+}
+
+
+
+/*
+grid-column is used to span each item according to there h# that was given based
+off of the functions from script.js.
+*/
+.item.h2 {
+  grid-column: span 2;
+}
+
+.item.h3 {
+  grid-column: span 3;
+}
+
+.item.h4 {
+  grid-column: span 4;
+}
+
+
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+
+.overlay.open {
+  display: grid;
+}
+
+.overlay figure {
+  background: white;
+  width: 700px;
+  padding: 20px;
+}
+
+.overlay img {
+  width: 100%;
+}
