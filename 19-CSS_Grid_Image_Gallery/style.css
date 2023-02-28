@@ -23,15 +23,15 @@ p {
 
 .close {
   background: none;
-  color: white;
+  color: black;
   border: 0;
 }
-
 
 
 /*
 .gallery uses display:grid to create the basis of the image gallery.
 */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
@@ -40,18 +40,17 @@ p {
 }
 
 
-
 /*
 .item creates a grid with 1 column and 1 row. This will be used to center the 
 image in the gallery.
 */
+
 .item {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 1;
 }
-
 
 .item img {
   grid-column: 1 / -1;
@@ -62,10 +61,10 @@ image in the gallery.
 }
 
 
-
 /*
 .item__overlay causes an image to become darker and have the view button.
 */
+
 .item__overlay {
   background: #00000032;
   grid-column: 1 / -1;
@@ -77,7 +76,6 @@ image in the gallery.
   transform: translateY(100%);
 }
 
-
 .item__overlay button {
   background: none;
   border: 2px solid white;
@@ -87,9 +85,11 @@ image in the gallery.
   padding: 5px;
 }
 
+
 /*
 Causes image to have the .item__overlay 100% applie when the mouse is hovered over it.
 */
+
 .item:hover .item__overlay {
   transform: translateY(0);
 }
@@ -99,6 +99,7 @@ Causes image to have the .item__overlay 100% applie when the mouse is hovered ov
 grid-row is used to span each item according to there v# that was given based
 off of the functions from script.js.
 */
+
 .item.v2 {
   grid-row: span 2;
 }
@@ -112,11 +113,11 @@ off of the functions from script.js.
 }
 
 
-
 /*
 grid-column is used to span each item according to there h# that was given based
 off of the functions from script.js.
 */
+
 .item.h2 {
   grid-column: span 2;
 }
@@ -129,8 +130,6 @@ off of the functions from script.js.
   grid-column: span 4;
 }
 
-
-
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
@@ -142,11 +141,23 @@ off of the functions from script.js.
   z-index: 2;
 }
 
+
+/*
+Centers the image when it is the main image
+*/
+
 .overlay.open {
   display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
-.overlay figure {
+
+/*
+Gives the main image a white background.
+*/
+
+.overlay .overlay-inner {
   background: white;
   width: 700px;
   padding: 20px;
