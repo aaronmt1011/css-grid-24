@@ -1,3 +1,2 @@
 <h1>Project 20: Flexbox vs CSS Grid - Self Control</h1>
-<p>This part of the project focuses on centering four separate corners. This is can only be done with CSS Grid.</p>
-<p>Will update once finished.</p>
+<p>This part of the project focuses on putting four separate divs into the corners of the container. This is can only be done with CSS Grid. (justify-self does not work for flex)</p>
