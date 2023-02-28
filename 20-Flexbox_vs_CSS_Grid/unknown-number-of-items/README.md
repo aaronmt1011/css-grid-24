@@ -1,2 +1,2 @@
 <h1>Project 20: Flexbox vs CSS Grid - Unknown Number of Items</h1>
-<p>This part of the project is focused on using CSS Grid to create something using an unknown number of items. This can only be done with CSS Grid.</p>
+<p>This part of the project is focused on using CSS Grid/flexbox to create something using an unknown number of items. This can be done with flexbox but it takes longer to do. Should stick with CSS Grid if faced with this task.</p>
