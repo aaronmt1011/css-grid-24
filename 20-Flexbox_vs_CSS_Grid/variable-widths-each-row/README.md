@@ -1,1 +1,2 @@
 <h1>Project 20: Flexbox vs CSS Grid - Variable Widths on Each Row</h1>
+<p>This project is focused on using flexbox to layout the items given. The challenge comes from the random spaces each item will occupy.</p>
