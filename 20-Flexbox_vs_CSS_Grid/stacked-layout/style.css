@@ -1,4 +1,12 @@
-.stacked {}
+/*
+flex is used to give the items a staggered pattern.
+*/
+
+.stacked {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .stacked>* {
     width: 30%;
