@@ -1,10 +1,32 @@
+/*
+flex would be the better solution to do this. The example has flex code that has
+been commented out for grid.
+*/
+
+/*
+CSS grid uses auto to have the buttons define themselves then fill up the rest 
+of the space with the center bar. Using CSS grid is risky here because chaning
+anything on the line can result in the lines appearing differently. Use with
+caution.
+*/
+
 .controls {
     margin: 200px 0;
+    /* display: flex; 
+    align-items: center;*/
+    display: grid;
+    grid-template-columns: auto auto auto 1fr auto auto;
+    align-items: center;
 }
 
+
+/*
+flex: 1; was used to make the bar div fill up all the leftover space.
+*/
 .scrubber {
     background: #BADA55;
     height: 10px;
     min-width: 100px;
     border-radius: 10px;
+    /* flex: 1; */
 }
