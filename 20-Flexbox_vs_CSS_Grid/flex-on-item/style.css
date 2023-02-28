@@ -1,0 +1,10 @@
+.controls {
+    margin: 200px 0;
+}
+
+.scrubber {
+    background: #BADA55;
+    height: 10px;
+    min-width: 100px;
+    border-radius: 10px;
+}
