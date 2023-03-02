@@ -7,8 +7,7 @@ html {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
 
-*,
-*:before,
+*, *:before,
 *:after {
   box-sizing: inherit;
 }
@@ -22,12 +21,7 @@ iframe {
   height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin: 0;
   font-size: 1.5em;
@@ -71,12 +65,12 @@ Header
   position: relative;
 }
 
-.button--small {
+.button-small {
   font-size: 12px;
   padding: 4px;
 }
 
-.button--dirty::before {
+.button-dirty::before {
   background: #ffc600;
   display: block;
   content: '';
@@ -103,6 +97,37 @@ Top Center Area
   background: #1b2b34;
 }
 
+.editor {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.editor_header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  background: rgba(0, 0, 0, 1);
+}
+
+.editor_code {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.editor_number {
+  display: block;
+  padding: 0 10px;
+}
+
+.editor_input {
+  background: none;
+  border: 0;
+  color: grey;
+  font-size: 16px;
+  line-height: 19px;
+}
 
 /*
 Top Bottom Area
@@ -110,4 +135,15 @@ Top Bottom Area
 
 .preview {
   display: grid;
+}
+
+
+
+/*
+Footer Area
+*/
+
+.settings {
+  padding: 5px;
+  background: black;
 }
