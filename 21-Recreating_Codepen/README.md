@@ -1,4 +1,3 @@
 <h1>Project 21: Recreating Codepen</h1>
 <p>This project is focused on recreating the website Codepen using CSS Grid.</p>
-<p>This should be a good project to test my knowledge on CSS Grid.</p>
-<p>Will update once finished.</p>
+<p>To get the site to function fully like the actual Codepen, we would need to use JavaScript. Which means this will be a template to complete in the future.</p>
