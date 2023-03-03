@@ -55,6 +55,10 @@ Header
   padding: 10px;
 }
 
+.pen_name {
+  color: grey;
+}
+
 .button {
   background: #343436;
   border: 0;
@@ -78,7 +82,7 @@ Header
   width: calc(100% - 6px);
   position: absolute;
   left: 3px;
-  top: 1px;
+  top: 2px;
 }
 
 .pen_image {
@@ -100,6 +104,10 @@ Top Center Area
 .editor {
   display: grid;
   grid-template-rows: auto 1fr;
+  border: 0px solid #343436;
+  border-bottom: 15px solid #343436;
+  border-left: 15px solid #343436;
+  border-right: 1px solid #0e3738;
 }
 
 .editor_header {
@@ -108,7 +116,7 @@ Top Center Area
   align-items: center;
   padding: 5px;
   gap: 5px;
-  background: rgba(0, 0, 0, 1);
+  background: #152229;
 }
 
 .editor_code {
@@ -119,6 +127,7 @@ Top Center Area
 .editor_number {
   display: block;
   padding: 0 10px;
+  padding-top: 2px;
 }
 
 .editor_input {
@@ -127,6 +136,8 @@ Top Center Area
   color: grey;
   font-size: 16px;
   line-height: 19px;
+  padding: 0px 2px;
+  padding-top: 1px;
 }
 
 /*
